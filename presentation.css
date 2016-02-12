@@ -1,0 +1,151 @@
+/* reset */
+
+html, body, div, span, h2, p, a { 
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  font-size: 100%; 
+  font: inherit; 
+  vertical-align: baseline; 
+}
+
+/* sanity in padding */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: normal; 
+  font-size: 16px;
+  font-family: Helvetica;
+  text-align: center;
+  color: #333;
+}
+
+h2#name {
+  font-size: 18px;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+div#rack {
+  line-height: 0;
+  margin: 20px auto;
+  width: 500px;
+  text-align: left;
+}
+
+a.thumb {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  margin: 3px;
+  background: transparent url() 50% 50% no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: inset 0 0 2px #000;
+}
+
+div#closeup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -300px;
+  height: 500px;
+  width: 600px;
+  background: transparent url() 50% 50% no-repeat;
+  background-size: contain;
+  transition: background-image .25s ease-in-out;
+}
+
+div#slug {
+  position: fixed;
+  top: 50%;
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: 260px;
+  padding: 5px;
+  color: #fefaf0;
+  text-shadow: 0 0 1px #000;
+}
+
+.nav {
+  position: fixed;
+  font-size: 20px;
+  top: 50%;
+  margin-top: -20px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 3px #000;
+  background: #fefaf0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a#back {
+  left: 40px;
+}
+
+a#forward {
+  right: 40px;
+}
+
+div#glass, div#tint {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: .5;
+  transition: background-color .25s ease-in-out;
+}
+
+div#glass {
+  opacity: .8;
+}
+
+div#display {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input#board {
+  font-family: monospace;
+  width: 500px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* this is a first very light pass at getting it to be better on mobile */
+
+@media (max-device-width:960px) {
+  .nav {
+    margin-top: -40px;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 40px;
+  }
+  div#slug {
+    top: 80%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    bottom: 20px;
+  }
+}
+
